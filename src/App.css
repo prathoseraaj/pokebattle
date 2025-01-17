@@ -13,7 +13,7 @@ body {
     padding: 20px;
     justify-content: center;
     align-items: center;
-    width: 900px;
+    width: 1100px;
     
   }
 
@@ -22,6 +22,18 @@ body {
     padding: 75px;
     border-radius: 5px;
     text-align: center;   
+}
+
+#poke1{
+  margin-top: 100px;
+}
+
+#poke2{
+  margin-bottom: 100px;
+}
+
+#base{
+  padding-top: -50px;
 }
 
 img {

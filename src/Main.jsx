@@ -5,7 +5,7 @@ const Main = () => {
   const [pokemon1data, setPokemon1data] = useState(null);
   const [pokemon2data, setPokemon2data] = useState(null);
   const [poke1hp, setPoke1hp] = useState(100);
-  const [poke2hp, setPoke2hp] = useState(100);
+  const [poke2hp, setPoke2hp] = useState(50);
 
 
 
@@ -26,10 +26,11 @@ const Main = () => {
   }, []);
   return (
     <div className='container'>
-      <div className='pokemon'>
+      <div className='pokemon' id='poke1'>
         {pokemon1data ? (
           <> 
-            <img src={pokemon1data.sprites.front_default} alt={pokemon1data.name} />
+            <img src={pokemon1data.sprites.back_default} alt={pokemon1data.name} />
+          <img src="/image.png" alt="ada" id='base' />
             <h2>{pokemon1data.name}</h2>
             <div className="health-bar" style={{ width: `${poke1hp}%`,
                                         backgroundColor: poke1hp > 50 ? '#4caf50' : '#ff9800' }}></div>
@@ -45,10 +46,11 @@ const Main = () => {
             <p>loading...</p>
           )}
       </div>
-      <div className='pokemon'>
+      <div className='pokemon' id='poke2'>
       {pokemon2data ? (
         <>
           <img src={pokemon2data.sprites.front_default} alt={pokemon2data.name} />
+          <img src="/image.png" alt="ada" id='base' />
           <h2>{pokemon2data.name}</h2>
           <div className="health-bar" style={{ width: `${poke2hp}%`,
                                       backgroundColor: poke2hp > 50 ? '#4caf50' : '#ff9800', }}></div>
