@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import './App.css';
 
 const Main = () => {
   const [pokemon1data, setPokemon1data] = useState(null);
@@ -21,12 +22,20 @@ const Main = () => {
     fetchpokemon();
   }, []);
   return (
-    <div>
+    <div className='container'>
       <div className='pokemon'>
-        
+        {pokemon1data ? (
+            <h2>{pokemon1data.name}</h2>
+          ) : (
+            <p>loading...</p>
+          )}
       </div>
       <div className='pokemon'>
-
+      {pokemon2data ? (
+            <h2>{pokemon2data.name}</h2>
+          ) : (
+            <p>loading...</p>
+          )}
       </div>
     </div>
   )

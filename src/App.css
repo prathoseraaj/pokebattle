@@ -1,0 +1,25 @@
+body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.container {
+    background-color: ghostwhite;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    
+  }
+
+.pokemon{
+    display: block;
+    padding: 75px;
+    border-radius: 5px;   
+}
+  
