@@ -4,6 +4,9 @@ import './App.css';
 const Main = () => {
   const [pokemon1data, setPokemon1data] = useState(null);
   const [pokemon2data, setPokemon2data] = useState(null);
+  const [poke1hp, setPoke1hp] = useState(100);
+  const [poke2hp, setPoke2hp] = useState(100);
+
 
 
 
@@ -25,14 +28,37 @@ const Main = () => {
     <div className='container'>
       <div className='pokemon'>
         {pokemon1data ? (
+          <> 
+            <img src={pokemon1data.sprites.front_default} alt={pokemon1data.name} />
             <h2>{pokemon1data.name}</h2>
+            <div className="health-bar" style={{ width: `${poke1hp}%`,
+                                        backgroundColor: poke1hp > 50 ? '#4caf50' : '#ff9800' }}></div>
+            <div>
+              <button className="button">attack</button>
+              <button className="button">defend</button>
+              <button className="button">heal</button>
+              <button className="button">special</button>
+            </div>
+          </>
+
           ) : (
             <p>loading...</p>
           )}
       </div>
       <div className='pokemon'>
       {pokemon2data ? (
-            <h2>{pokemon2data.name}</h2>
+        <>
+          <img src={pokemon2data.sprites.front_default} alt={pokemon2data.name} />
+          <h2>{pokemon2data.name}</h2>
+          <div className="health-bar" style={{ width: `${poke2hp}%`,
+                                      backgroundColor: poke2hp > 50 ? '#4caf50' : '#ff9800', }}></div>
+          <div className='buttoncontainer'>
+            <button className="button">attack</button>
+            <button className="button">defend</button>
+            <button className="button">heal</button>
+            <button className="button">special</button>
+          </div>
+        </>
           ) : (
             <p>loading...</p>
           )}
