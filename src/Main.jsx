@@ -29,8 +29,8 @@ const Main = () => {
       <div className='pokemon' id='poke1'>
         {pokemon1data ? (
           <> 
-            <img src={pokemon1data.sprites.back_default} alt={pokemon1data.name} />
-          <img src="/image.png" alt="ada" id='base' />
+          <img src={pokemon1data.sprites.back_default} alt={pokemon1data.name} class='pokemonimg' id='pokemon1' style={{ position: 'relative', zIndex: 2 }}/>
+          <img src="/image.png" alt="ada" className='base' style={{ position: 'relative', zIndex: 1 }}  />
             <h2>{pokemon1data.name}</h2>
             <div className="health-bar" style={{ width: `${poke1hp}%`,
                                         backgroundColor: poke1hp > 50 ? '#4caf50' : '#ff9800' }}></div>
@@ -49,8 +49,8 @@ const Main = () => {
       <div className='pokemon' id='poke2'>
       {pokemon2data ? (
         <>
-          <img src={pokemon2data.sprites.front_default} alt={pokemon2data.name} />
-          <img src="/image.png" alt="ada" id='base' />
+          <img src={pokemon2data.sprites.front_default} alt={pokemon2data.name} class='pokemonimg' id='pokemon2' style={{ position: 'relative', zIndex: 2 }} />
+          <img src="/image.png" alt="ada" className='base' style={{ position: 'relative', zIndex: 1 }} />
           <h2>{pokemon2data.name}</h2>
           <div className="health-bar" style={{ width: `${poke2hp}%`,
                                       backgroundColor: poke2hp > 50 ? '#4caf50' : '#ff9800', }}></div>
